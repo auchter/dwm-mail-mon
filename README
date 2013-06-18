@@ -1,0 +1,11 @@
+dwm-mail-mon - mail monitor for dwm
+
+OVERVIEW
+    This is a simple program to monitor a list of directories using inotify(7) 
+    and update dwm's status bar when a file is added or removed. It's intended 
+    to be used with a list of Maildirs to display the number of new messages.
+
+CONFIGURATION
+   Modify the watches[] array in dwm-mail-mon.c to include the list of paths you 
+   wish to monitor, as well as the name to display.
+
