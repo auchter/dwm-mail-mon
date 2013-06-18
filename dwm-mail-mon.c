@@ -126,7 +126,7 @@ int main(int argc, char **argv)
 
 	FOREACH(w, watches) {
 		w->nfiles = nfiles_in_dir(w->path);
-		w->wd = inotify_add_watch(fd, w->path, IN_CREATE|IN_DELETE);
+		w->wd = inotify_add_watch(fd, w->path, IN_CREATE|IN_DELETE|IN_MOVED_FROM);
 		if (w->wd < 0)
 			fatal("failed to add watch for \"%s\": %s\n",
 					w->path, strerror(errno));
